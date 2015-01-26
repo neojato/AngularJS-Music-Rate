@@ -1,4 +1,4 @@
-# AngularJS-Music-Rating
+# AngularJS-Music-Rate
 3-part tutorial from g00glen00b
 
 * [Tutorial 1] - Introduction to AngularJS
