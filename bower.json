@@ -1,0 +1,11 @@
+{
+  "name": "AngularJS-Music-Rate",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "latest",
+    "bootstrap": "latest",
+    "lodash": "latest",
+    "underscore.string": "latest",
+    "font-awesome": "latest"
+  }
+}
