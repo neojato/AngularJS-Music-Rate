@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title>Rate the song</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-</body>
+  <body ng-app="myApp">
+    <div ng-controller="songCtrl" class="container">
+      <div class="page-header">
+        <h1>Rate the song <small>Like them all!</small></h1>
+      </div>
+      <table class="table table-striped table-condensed">
+        <thead>
+          <tr>
+            <th>Song</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="song in songs">
+            <td>
+              <div class="pull-left">
+                <strong>{{song.artist}}</strong><br />
+                <small>{{song.title}}</small>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+    <script type="text/javascript" src="libs/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="libs/underscore.string/dist/underscore.string.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers.js"></script>
+    <script type="text/javascript" src="app/services.js"></script>
+    <script type="text/javascript" src="app/filters.js"></script>
+    <script type="text/javascript" src="app/directives.js"></script>
+  </body>
 </html>
