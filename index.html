@@ -31,6 +31,23 @@
           </tr>
         </tbody>
       </table>
+      <form role="form" ng-submit="addSong(newSong.artist, newSong.title)">
+        <div class="row">
+          <div class="col-sm-5">
+            <label class="sr-only" for="artist">Artist</label>
+            <input type="text" class="form-control" name="artist" placeholder="Name of the artist, band, ..." 
+              ng-model="newSong.artist" autofocus />
+          </div>
+          <div class="col-sm-5">
+            <label class="sr-only" for="song">Song</label>
+            <input type="text" class="form-control" name="song" placeholder="Enter the name of the song..." 
+              ng-model="newSong.title" />
+          </div>
+          <div class="col-sm-2">
+            <button type="submit" class="btn btn-default form-control">Add</button>
+          </div>
+        </div>
+      </form>
     </div>
 
     <script type="text/javascript" src="libs/angular/angular.min.js"></script>

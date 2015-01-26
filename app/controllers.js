@@ -10,4 +10,13 @@ angular.module("myApp.controllers", [])
         artist: "Within Temptation",
         title: "Ice Queen"
       }];
+  		$scope.newSong = { };
+  		$scope.addSong = function(/** String */ artist, /** String */ title) {
+        $scope.songs.push({
+          artist: artist,
+          title: title
+        });
+        $scope.newSong.title = "";
+        $scope.newSong.artist = "";
+      };
 	});
