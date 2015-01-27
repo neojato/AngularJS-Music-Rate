@@ -23,7 +23,10 @@ angular.module("myApp.controllers", [])
         }
       });
   		
-  		$scope.deleteSong = function(/** Integer */ idx) {
-        $scope.songs.splice(idx, 1);
+  		$scope.deleteSong = function(/** Song */ song) {
+        var idx = $scope.songs.indexOf(song);
+        if (idx >= 0) {
+          $scope.songs.splice(idx, 1);
+        }
       };
 	});

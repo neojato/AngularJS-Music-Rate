@@ -47,6 +47,7 @@ angular.module("myApp.directives", [])
       
       scope.setRating = function(idx) {
         scope.score = idx + 1;
+        scope.stopHover();
       };
       
       scope.$watch('score', function(newValue, oldValue) {

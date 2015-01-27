@@ -24,7 +24,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="song in songs">
+          <tr ng-repeat="song in songs | orderBy:'-score'">
             <td>
               <div class="pull-left">
                 <strong>{{song.artist | titleize}}</strong><br />
@@ -32,7 +32,7 @@
               </div>
               <div class="pull-right">
                 <div rating score="song.score" max="5" class="pull-left"></div>
-                <button type="button" class="btn btn-danger pull-right" ng-click="deleteSong($index)">
+                <button type="button" class="btn btn-danger pull-right" ng-click="deleteSong(song)">
                   <i class="fa fa-trash-o"></i>
                 </button>
               </div>
