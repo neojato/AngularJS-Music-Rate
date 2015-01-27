@@ -21,9 +21,25 @@ angular.module("myApp.directives", [])
         }
       };
       
+      scope.hover = function(idx) {
+        scope.hoverIdx = idx;
+      };
+
+      scope.stopHover = function() {
+        scope.hoverIdx = -1;
+      };
+      
+      scope.starColor = function(idx) {
+        var starClass = 'rating-normal';
+        if(idx <= scope.hoverIdx) {
+         starClass = 'rating-highlight'; 
+        }
+        return starClass;
+      };
+      
       scope.starClass = function(star, idx) {
         var starClass = 'fa-star-o';
-        if(star.full) {
+        if(star.full || idx <= scope.hoverIdx) {
           starClass = 'fa-star';
         }
         return starClass;
