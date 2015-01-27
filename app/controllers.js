@@ -1,6 +1,6 @@
 angular.module("myApp.controllers", [])
-	.controller("songCtrl", function($scope) {
-  		$scope.songs = [];
+	.controller("songCtrl", function($scope, songService) {
+  		$scope.songs = songService.get();
   		$scope.newSong = {};
   		
   		$scope.addSong = function(/** String */ artist, /** String */ title) {
@@ -15,4 +15,10 @@ angular.module("myApp.controllers", [])
   		$scope.isEmpty = function(/** String */ str) {
         return _.isBlank(str);
       };
+  		
+  		$scope.$watch('songs', function (newValue, oldValue) {
+        if (newValue !== oldValue) {
+          songService.put($scope.songs);
+        }
+      });
 	});
