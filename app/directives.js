@@ -8,5 +8,7 @@ angular.module("myApp.directives", [])
       max: '=max'
     };
 
+    directive.templateUrl = "app/templates/rating.html";
+
     return directive;
   });
