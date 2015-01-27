@@ -30,6 +30,11 @@
                 <strong>{{song.artist | titleize}}</strong><br />
                 <small>{{song.title | titleize}}</small>
               </div>
+              <div class="pull-right">
+                <button type="button" class="btn btn-danger pull-right" ng-click="deleteSong($index)">
+                  <i class="fa fa-trash-o"></i>
+                </button>
+              </div>
             </td>
           </tr>
         </tbody>

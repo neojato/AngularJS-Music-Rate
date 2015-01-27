@@ -21,4 +21,8 @@ angular.module("myApp.controllers", [])
           songService.put($scope.songs);
         }
       });
+  		
+  		$scope.deleteSong = function(/** Integer */ idx) {
+        $scope.songs.splice(idx, 1);
+      };
 	});
