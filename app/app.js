@@ -1,4 +1,5 @@
 angular.module("myApp", [
+  'myApp.filters',
   'myApp.controllers'
 ]);
 

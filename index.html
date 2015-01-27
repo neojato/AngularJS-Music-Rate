@@ -27,8 +27,8 @@
           <tr ng-repeat="song in songs">
             <td>
               <div class="pull-left">
-                <strong>{{song.artist}}</strong><br />
-                <small>{{song.title}}</small>
+                <strong>{{song.artist | titleize}}</strong><br />
+                <small>{{song.title | titleize}}</small>
               </div>
             </td>
           </tr>
